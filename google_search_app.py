@@ -26,5 +26,12 @@ def index():
 
     return render_template("index.html", query=query, results=results)
 
+@app.route("/summary", methods=["GET"])
+def summary():
+    return {
+        "message": "This is my custom endpoint on RunPod!",
+        "status": "working"
+    }
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
