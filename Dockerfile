@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install flask requests
+# Install all dependencies from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 8080
 
